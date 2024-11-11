@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyam Agrawal - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .left, .right {
+            padding: 20px;
+        }
+        .left {
+            width: 35%;
+            background-color: #292b2c;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .left img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .left h1 {
+            margin-bottom: 10px;
+        }
+        .social-links a {
+            color: #fff;
+            margin: 10px;
+            text-decoration: none;
+        }
+        .skills {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .skill {
+            margin-bottom: 15px;
+        }
+        .skill-bar {
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .bar {
+            height: 20px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+        }
+        .right {
+            width: 65%;
+        }
+        .experience {
+            margin-bottom: 20px;
+        }
+        .experience h2 {
+            color: #292b2c;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background-color: #292b2c;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-details {
+            display: none;
+            margin-top: 20px;
+        }
+        .project-details.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for two-column layout -->
+    <div class="container">
+        <!-- Left side for personal info and skills -->
+        <div class="left">
+            <img src="https://via.placeholder.com/150" alt="Profile Photo">
+            <h1>Divyam Agrawal</h1>
+            <p>Seattle, WA | Data Scientist & Software Engineer</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">Download Resume</a>
+            </div>
+
+            <!-- Skill Ratings -->
+            <div class="skills">
+                <div class="skill">
+                    <p>Python</p>
+                    <div class="skill-bar"><div class="bar" style="width: 80%;">4/5</div></div>
+                </div>
+                <div class="skill">
+                    <p>SQL</p>
+                    <div class="skill-bar"><div class="bar" style="width: 100%;">5/5</div></div>
+                </div>
+                <div class="skill">
+                    <p>R</p>
+                    <div class="skill-bar"><div class="bar" style="width: 60%;">3/5</div></div>
+                </div>
+                <div class="skill">
+                    <p>AWS</p>
+                    <div class="skill-bar"><div class="bar" style="width: 80%;">4/5</div></div>
+                </div>
+                <div class="skill">
+                    <p>Power BI</p>
+                    <div class="skill-bar"><div class="bar" style="width: 60%;">3/5</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side for work experience and projects -->
+        <div class="right">
+            <div class="experience">
+                <h2>Work Experience</h2>
+                <div>
+                    <h3>Affinity Solutions (ML Engineer Intern)</h3>
+                    <p>Reduced transaction retrieval time by 70% using LSH.</p>
+                </div>
+                <div>
+                    <h3>Expedia Group (SDE)</h3>
+                    <p>Improved customer coupon success rate by 43%.</p>
+                </div>
+            </div>
+
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card" onclick="toggleProject(1)">Project 1</div>
+                <div class="project-card" onclick="toggleProject(2)">Project 2</div>
+                <div class="project-card" onclick="toggleProject(3)">Project 3</div>
+            </div>
+
+            <!-- Project Details -->
+            <div id="project1" class="project-details">
+                <h3>Project 1: LLM-based Classification</h3>
+                <p>Achieved 98.93% precision using custom LLMs.</p>
+            </div>
+            <div id="project2" class="project-details">
+                <h3>Project 2: Data Archiving at Expedia</h3>
+                <p>Improved efficiency by 35% using AWS Athena.</p>
+            </div>
+            <div id="project3" class="project-details">
+                <h3>Project 3: Time Series Forecasting</h3>
+                <p>Boosted funnel conversion rate by 22% using LSTMs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for toggling project details -->
+    <script>
+        function toggleProject(id) {
+            const project = document.getElementById('project' + id);
+            project.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
