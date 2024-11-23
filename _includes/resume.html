@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyam Agrawal - Digital Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .user-details, .user-projects {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .user-details h1, .user-projects h1 {
+            margin-bottom: 20px;
+        }
+        .user-projects {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .user-projects div {
+            width: 45%;
+            margin: 2.5%;
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .user-projects img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .project-link {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            text-decoration: none;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .project-link:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Divyam Agrawal</h1>
+        <p>Seattle, WA | (206) 756-5954 | <a href="mailto:diagra@uw.edu" style="color: #4caf50;">diagra@uw.edu</a> | <a href="https://linkedin.com/in/divyam-agrawal" style="color: #4caf50;">LinkedIn</a></p>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <div class="user-details">
+            <h1>About Me</h1>
+            <p>I am a passionate Data Scientist with expertise in Machine Learning, NLP, and Generative AI. With hands-on experience in building scalable solutions at organizations like Affinity Solutions and Expedia, I excel at solving complex problems using cutting-edge technologies. Currently pursuing my MS in Data Science at the University of Washington, Seattle.</p>
+        </div>
+
+        <!-- Featured Projects Section -->
+        <div class="user-details">
+            <h1>Featured Projects</h1>
+        </div>
+
+        <div class="user-projects">
+            <div>
+                <img src="https://via.placeholder.com/400" alt="Project 1">
+                <h3>Project 1: Credit Card Transaction Classification</h3>
+                <p>Achieved 98.93% precision by training and fine-tuning a custom LLM with Retrieval-Augmentation using AWS SageMaker and LangChain.</p>
+                <a href="#" class="project-link">Learn More</a>
+            </div>
+
+            <div>
+                <img src="https://via.placeholder.com/400" alt="Project 2">
+                <h3>Project 2: Data Pipeline Optimization</h3>
+                <p>Reduced processing time by 35% through efficient data archival and purging solutions using AWS Athena and MS-SQL.</p>
+                <a href="#" class="project-link">Learn More</a>
+            </div>
+
+            <div>
+                <img src="https://via.placeholder.com/400" alt="Project 3">
+                <h3>Project 3: VAE-GAN for Fingerprint Synthesis</h3>
+                <p>Designed a state-of-the-art VAE-GAN for generating synthetic fingerprint datasets, achieving a 96.8% precision rate.</p>
+                <a href="#" class="project-link">Learn More</a>
+            </div>
+
+            <div>
+                <img src="https://via.placeholder.com/400" alt="Project 4">
+                <h3>Project 4: Interactive Machine Learning Dashboard</h3>
+                <p>Built a dashboard to visualize class imbalance effects on evaluation metrics. Featured in the Voila Gallery.</p>
+                <a href="#" class="project-link">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="user-details">
+            <h1>Education</h1>
+            <ul>
+                <li><strong>University of Washington, Seattle, WA</strong> - MS in Data Science (2023-2025) | GPA: 3.85/4.0</li>
+                <li><strong>Indraprastha Institute of Information Technology, Delhi, India</strong> - BTech in Computer Science and Applied Mathematics (2017-2021)</li>
+            </ul>
+        </div>
+
+        <!-- Professional Experience Section -->
+        <div class="user-details">
+            <h1>Professional Experience</h1>
+            <ul>
+                <li><strong>Affinity Solutions (2024 - Present):</strong> Machine Learning Engineer Intern - Delivered high-precision LLM-based solutions and optimized data pipelines.</li>
+                <li><strong>Expedia Group (2021 - 2023):</strong> Software Developer Engineer - Improved coupon success rates and streamlined risk management systems.</li>
+                <li><strong>Università degli Studi di Milano (2019):</strong> Research Intern - Developed advanced computer vision models using PyTorch and TensorFlow.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
